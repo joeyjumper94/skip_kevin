@@ -1,0 +1,1 @@
+for those who have played kevin's meeting and do not feel like watching that dialog every time they go to the hatchery in chapter 4
