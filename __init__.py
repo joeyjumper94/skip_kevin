@@ -34,12 +34,19 @@ class AWSWMod(Mod):
         #modast.call_hook(c4hatchery, skip_kevin_skip_choice, None)
         """
         #start=modast.find_say("I was on my way to the hatchery when I heard a voice call out to me.")
+        """
         c4hatchery=modast.find_label("c4hatchery")
         c4hatchery_next=c4hatchery.next
         skipped=modast.find_say("(Here we are again.)")
         connect(c4hatchery,modast.find_label("skip_kevin_skip_choice"))
         connect(modast.find_label("skip_kevin_skip_no"),c4hatchery_next)
         connect(modast.find_label("skip_kevin_skip_yes"),skipped)
+        """
+        skip_keven_skip_choice=modast.find_say("Hey. I'm Kevin.")
+        skip_keven_skip_no=skip_keven_skip_choice.next
+        connect(skip_keven_skip_choice,modast.find_label("skip_kevin_skip_choice"))
+        connect(modast.find_label("skip_kevin_skip_no"),skip_keven_skip_no)
+        connect(modast.find_label("skip_kevin_skip_yes"),modast.find_say("(Here we are again.)"))
 
     def mod_complete(self):
         pass
