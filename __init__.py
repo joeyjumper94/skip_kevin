@@ -53,10 +53,10 @@ class AWSWMod(Mod):
         c4hatchery_filename=c4hatchery.filename
         for node in renpy.game.script.all_stmts:
             if c4hatchery_filename==node.filename and isinstance(node,ast.Say):
-                if node.what=="(Here we are again.)"
+                if node.what=="(Here we are again.)":
                     skip_kevin_skip_yes=node
                     connect(modast.find_label("skip_kevin_skip_yes"),skip_kevin_skip_yes)
-                if node.what=="Hey. I'm Kevin."
+                if node.what=="Hey. I'm Kevin.":
                     skip_keven_skip_choice=node
                     skip_keven_skip_no=skip_keven_skip_choice.next
                     connect(skip_keven_skip_choice,modast.find_label("skip_kevin_skip_choice"))
